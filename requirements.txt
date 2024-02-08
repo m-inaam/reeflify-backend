@@ -3,3 +3,4 @@ tensorflow
 Pillow
 gunicorn
 Werkzeug
+flask-cors

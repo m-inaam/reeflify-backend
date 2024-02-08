@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import tensorflow as tf
 from PIL import Image
 import numpy as np
@@ -6,8 +7,9 @@ from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
-TF_MODEL_FILE_PATH = 'model.tflite'  
+TF_MODEL_FILE_PATH = 'model.tflite'
 
 # Load TensorFlow Lite model
 interpreter = tf.lite.Interpreter(model_path=TF_MODEL_FILE_PATH)
