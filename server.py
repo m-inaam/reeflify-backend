@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 
-TF_MODEL_FILE_PATH = '../models/model.tflite'  
+TF_MODEL_FILE_PATH = 'model.tflite'  
 
 # Load TensorFlow Lite model
 interpreter = tf.lite.Interpreter(model_path=TF_MODEL_FILE_PATH)
